@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.domdomegg/olio-volunteer-mcp",
+  "title": "Olio Volunteer Hub",
+  "description": "Browse and inspect Olio Food Waste Hero collections via the Volunteer Hub.",
+  "websiteUrl": "https://github.com/domdomegg/olio-volunteer-mcp#readme",
+  "repository": {
+    "url": "https://github.com/domdomegg/olio-volunteer-mcp.git",
+    "source": "github"
+  },
+  "version": "{{VERSION}}",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "olio-volunteer-mcp",
+      "version": "{{VERSION}}",
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "OLIO_SESSION_ID",
+          "description": "Value of the `_session_id` cookie from a logged-in session at https://volunteers.olioex.com.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "OLIO_BASE_URL",
+          "description": "Base URL of the Volunteer Hub (default: https://volunteers.olioex.com).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ],
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

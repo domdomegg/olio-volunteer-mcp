@@ -1,6 +1,6 @@
 {
   "name": "olio-volunteer-mcp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "MCP server for the Olio Volunteer Hub - browse Food Waste Hero collections, your squads, and your collection history.",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",

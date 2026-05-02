@@ -1,3 +1,15 @@
-export const sum = (a: number, b: number): number => a + b;
+import {McpServer} from '@modelcontextprotocol/sdk/server/mcp.js';
+import {registerAll, type Config} from './tools/index.js';
 
-export const multiply = (a: number, b: number): number => a * b;
+export type {Config} from './tools/index.js';
+
+export function createServer(config: Config): McpServer {
+	const server = new McpServer({
+		name: 'olio-volunteer-mcp',
+		version: '0.0.0',
+	});
+
+	registerAll(server, config);
+
+	return server;
+}

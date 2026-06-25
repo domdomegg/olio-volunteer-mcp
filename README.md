@@ -20,13 +20,7 @@ MCP server for the [Olio Volunteer Hub](https://volunteers.olioex.com) — brows
 
 1. Log in to https://volunteers.olioex.com in a browser.
 2. Open DevTools → Application → Cookies → `https://volunteers.olioex.com`, copy the value of `_session_id`.
-3. Configure the MCP:
-
-```bash
-claude mcp add olio-volunteer-mcp \
-  -e OLIO_SESSION_ID="..." \
-  -- npx -y olio-volunteer-mcp
-```
+3. Install via [install-mcp](https://adamjones.me/install-mcp/?config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIm9saW8tdm9sdW50ZWVyLW1jcCJdLCJuYW1lIjoib2xpby12b2x1bnRlZXIiLCJlbnYiOnsiT0xJT19TRVNTSU9OX0lEIjoiLi4uIn19), setting `OLIO_SESSION_ID` to the cookie value you copied (replacing the placeholder in the generated config).
 
 The session cookie expires after a while; if tools start returning auth errors, refresh it the same way.
 
